@@ -461,7 +461,7 @@ class compression:
                                             Find_guess=1
                                             
                                         elif long_file<=long_after or long_after<=1:
-                                            sda3=sda10
+                                            sda3=sda9
                                             Deep100=Deep100+1
                                             sda9=""
                                             sda19=""
