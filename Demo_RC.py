@@ -179,6 +179,7 @@ class compression:
                                 predict=-1
                                 Where2=0
                                 Where3=0
+                                Deep101=0
                                 
                                 
 
@@ -363,7 +364,7 @@ class compression:
                                                          
                                                         
                 
-                                                    sda3=sda6
+                                                    sda3=b+sda6
                                                     Where2=0
                                                     Where3=0
                                                     
@@ -453,21 +454,70 @@ class compression:
                                                                                                                     
                                                                                                                     
                                         sda9=add_bits118+sda24+sda9
+                                        
+                                        #print(Deep101)
 
                                         long_file=len(sda10)
                                         long_after=len(sda9)
-                                        if long_file>long_after or lenf>39 or Deep100>=long_after:
+                                        #print(long_after)
+                                      
+                                        if long_file>=long_after and long_after<=300 or lenf>39 or Deep100>=long_after:
                                             sda11=sda9
                                             Find_guess=1
-                                            
-                                        elif long_file<=long_after or long_after<=1:
-                                            sda3=sda10
-                                            Deep100=Deep100+1
-                                            sda9=""
-                                            sda19=""
-                                            start=-1
                                       
                                             
+                                            
+                                        elif long_file>long_after:
+                                            sda3=sda9
+                                           
+                                            #print(Deep101)
+                                            sda9=""
+                                            sda19=""
+                                            
+                                            
+                                            predict=-1
+                                            times_compression=0
+                                       
+                                        elif long_file<=long_after:
+                                            sda3=sda9
+                                            Deep101=Deep101+1
+                                            #print(Deep101)
+                                            sda9=""
+                                            sda19=""
+                                            
+                                            
+                                            predict=-1
+                                            times_compression=0
+                                            
+                                            
+                                            
+                                      
+                                     
+                                                                                            
+                                                                                            
+                                    Z=0
+                                    if Z==0:
+                                        
+                                        sda24=bin(Deep101)[2:]
+                                        lenf=len(sda24)
+                                        if lenf>40:
+                                                print("File too big")
+                                                raise SystemExit
+                                                                                            
+                                                                                            
+                                                                                        
+                                        add_bits118=""
+                                        count_bits=40-lenf%40
+                                        z=0
+                                        if count_bits!=0:
+                                            if count_bits!=40:
+                                                while z<count_bits:
+                                                    add_bits118="0"+add_bits118
+                                                    z=z+1
+                                                                                                                    
+                                                                                                                    
+                                        sda11=add_bits118+sda24+sda11                                               
+         
                                         
                                     n = int(sda11, 2)
                                 
