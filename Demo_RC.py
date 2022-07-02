@@ -455,19 +455,22 @@ class compression:
 
                                         long_file=len(sda10)
                                         long_after=len(sda9)
-                                        if long_file<=long_after or long_after<=1:
+                                        if long_file>long_after or lenf>39:
+                                            sda11=sda9
+                                            Find_guess=1
+                                            
+                                        elif long_file<=long_after or long_after<=1:
                                             sda3=sda10
                                             Deep100=Deep100+1
                                             sda9=""
                                             sda19=""
                                             start=-1
-                                        elif long_file>long_after or lenf>39:
-                                            Find_guess=1
+                                      
                                             
                                         
-                                    n = int(sda9, 2)
+                                    n = int(sda11, 2)
                                 
-                                    qqwslenf=len(sda9)
+                                    qqwslenf=len(sda11)
                                     qqwslenf=(qqwslenf/8)*2
                                     qqwslenf=str(qqwslenf)
                                     qqwslenf="%0"+qqwslenf+"x"
