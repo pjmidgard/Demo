@@ -238,6 +238,7 @@ class compression:
                                                                                 str_find_tree_maches=sda3[block:block+blocks]
                                                                                 if b[0:2]=="01":
                                                                                                        b="10"+b[2:]
+                                                                                                       
                                                         
 
                                                                                 
@@ -455,7 +456,7 @@ class compression:
 
                                         long_file=len(sda10)
                                         long_after=len(sda9)
-                                        if long_file>long_after or lenf>39:
+                                        if long_file>long_after or lenf>39 or Deep100>=long_after:
                                             sda11=sda9
                                             Find_guess=1
                                             
