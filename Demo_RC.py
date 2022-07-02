@@ -177,6 +177,8 @@ class compression:
                                 sda19=""
                                 sda10=sda3
                                 predict=-1
+                                Where2=0
+                                Where3=0
                                 
                                 
 
@@ -259,6 +261,12 @@ class compression:
                                                                                     if find_matches1_1==0:
 
                                                                                         sda4=str_find_tree_maches[:0]+"01"+str_find_tree_maches[4:]
+                                                                                        Where3=block+0
+                                                                                        Where2=Where2-2
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
 
 
                                                                                     Where=0
@@ -268,9 +276,10 @@ class compression:
                                                                                     find_matches1_2=int(find_matches2)
                                                                                     if find_matches1_2==0:
                                                                                         Where=block+0
+                                                                                        
                                                                                         if Where!=0:
                                                                                     
-                                                                                            sda20=bin(Where)[2:]
+                                                                                            sda20=bin(Where-Where2)[2:]
                                                                                             lenf=len(sda20)
                                                                                             if lenf>size_compress:
                                                                                                 print("File too big")
@@ -333,6 +342,8 @@ class compression:
                                                         
                 
                                                     sda3=sda6
+                                                    Where2=0
+                                                    Where3=0
                                                     
                                                     #print(len(sda6))
                                                     sda6=""
@@ -381,7 +392,7 @@ class compression:
                                                                     
                                         sda9=add_bits118+sda9
 
-                                        sda24=bin(times2)[2:]
+                                        sda24=bin(times_compression)[2:]
                                         lenf=len(sda24)
                                         if lenf>40:
                                                 print("File too big")
