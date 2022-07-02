@@ -262,7 +262,7 @@ class compression:
 
                                                                                         sda4=str_find_tree_maches[:0]+"01"+str_find_tree_maches[4:]
                                                                                         Where3=block+0
-                                                                                        Where2=Where2-2
+                                                                                        Where2=Where2+2
                                                                                         
                                                                                         
                                                                                         
