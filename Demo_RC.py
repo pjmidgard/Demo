@@ -4,7 +4,7 @@ import os
 import binascii
 self="'"
 
-namez = input("for compress c or extract e? ")
+namez = input("for compress c? ")
 #@Author Jurijus pacalovas
 class compression:
 
