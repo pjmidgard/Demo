@@ -461,7 +461,7 @@ class compression:
                                             sda9=""
                                             sda19=""
                                             start=-1
-                                        elif long_file>long_after:
+                                        elif long_file>long_after or lenf>39:
                                             Find_guess=1
                                             
                                         
