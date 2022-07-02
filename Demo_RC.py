@@ -466,6 +466,9 @@ class compression:
                                             sda9=""
                                             sda19=""
                                             start=-1
+                                            times_compression=0
+                                            predict=-1
+                                            
                                       
                                             
                                         
