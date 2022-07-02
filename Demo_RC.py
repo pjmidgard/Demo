@@ -298,7 +298,7 @@ class compression:
                                                                                                         z=z+1
                                                                                                                         
                                                                                                                         
-                                                                                            sda19="1"+sda20+sda19
+                                                                                            sda19=sda20+sda19
                                                                                             bits=len(add_bits118)
                                                                                             sda20=bin(bits)[2:]
                                                                                             lenf=len(sda20)
