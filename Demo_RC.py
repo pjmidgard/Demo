@@ -1,4 +1,4 @@
-from time import time
+From time import time
 cvf=0
 import os
 import binascii
@@ -318,7 +318,7 @@ class compression:
                                                                                                         z=z+1
                                                                                                                         
                                                                                                                         
-                                                                                            sda19="1"+add_bits119+sda25+sda30
+                                                                                            sda19="1"+sda19+add_bits119+sda25+sda30
                                                                                             
                                                                                             Find=0
 
