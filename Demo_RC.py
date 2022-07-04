@@ -294,7 +294,7 @@ class compression:
                                                                                             if count_bits!=0:
                                                                                                 if count_bits!=size_compress:
                                                                                                     while z<count_bits:
-                                                                                                        add_bits118=add_bits118
+                                                                                                        add_bits118="0"+add_bits118
                                                                                                         z=z+1
                                                                                                                         
                                                                                                                         
@@ -314,11 +314,11 @@ class compression:
                                                                                             if count_bits!=0:
                                                                                                 if count_bits!=6:
                                                                                                     while z<count_bits:
-                                                                                                        add_bits119=add_bits119
+                                                                                                        add_bits119="0"+add_bits119
                                                                                                         z=z+1
                                                                                                                         
                                                                                                                         
-                                                                                            sda19="1"+add_bits118+sda25+sda30
+                                                                                            sda19="1"+add_bits119+sda25+sda30
                                                                                             
                                                                                             Find=0
 
