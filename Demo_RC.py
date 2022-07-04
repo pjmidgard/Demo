@@ -457,7 +457,7 @@ class compression:
 
                                         long_file=len(sda10)
                                         long_after=len(sda9)
-                                        if long_file>long_after and long_after<=168 or lenf>39 or Deep100!=long_after:
+                                        if long_file>long_after and long_after<=168 or lenf>39 or Deep100>=long_after:
                                             sda11=sda9
                                             Find_guess=1
                                             
