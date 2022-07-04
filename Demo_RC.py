@@ -294,31 +294,31 @@ class compression:
                                                                                             if count_bits!=0:
                                                                                                 if count_bits!=size_compress:
                                                                                                     while z<count_bits:
-                                                                                                        add_bits118="0"+add_bits118
+                                                                                                        add_bits118=add_bits118
                                                                                                         z=z+1
                                                                                                                         
                                                                                                                         
-                                                                                            sda19=sda20+sda19
+                                                                                            sda30=sda20
                                                                                             bits=len(add_bits118)
-                                                                                            sda20=bin(bits)[2:]
-                                                                                            lenf=len(sda20)
+                                                                                            sda25=bin(bits)[2:]
+                                                                                            lenf=len(sda25)
                                                                                             if lenf>6:
                                                                                                 print("File too big")
                                                                                                 raise SystemExit
                                                                                                 
                                                                                                 
                                                                                             
-                                                                                            add_bits118=""
+                                                                                            add_bits119=""
                                                                                             count_bits=6-lenf%6
                                                                                             z=0
                                                                                             if count_bits!=0:
                                                                                                 if count_bits!=6:
                                                                                                     while z<count_bits:
-                                                                                                        add_bits118="0"+add_bits118
+                                                                                                        add_bits119=add_bits119
                                                                                                         z=z+1
                                                                                                                         
                                                                                                                         
-                                                                                            sda19="1"+add_bits118+sda20+sda19
+                                                                                            sda19="1"+add_bits118+sda25+sda30
                                                                                             
                                                                                             Find=0
 
@@ -356,7 +356,7 @@ class compression:
                                                                                 #print(block)
                                                          
                                                     times_compression=times_compression+1
-                                                    sda19="0"+sda19
+                                                    sda19=sda19+"0"
                                                     #print(times_compression)
                                                     
                                                     
