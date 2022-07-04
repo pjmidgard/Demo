@@ -499,7 +499,7 @@ class compression:
                                                 z=z+1
                                                                                                                     
                                                                                                                     
-                                    sda9=add_bits118+sda24+sda
+                                    sda11=add_bits118+sda24+sda11
                                     
                                     n = int(sda11, 2)
                                 
